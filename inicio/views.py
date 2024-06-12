@@ -8,7 +8,7 @@ from inicio.models import Vuelo
 
 # Create your views here.
 def inicio(request):
-    return render(request, 'probando.html',)
+    return render(request, 'inicio/index.html')
 
 def crear_vuelo(request, nombrevuelo, aerolinea, fabricante, modelo, pasajeros):
     vuelo= Vuelo(nombrevuelo=nombrevuelo, aerolinea=aerolinea, fabricante=fabricante, modelo=modelo, pasajeros=pasajeros)
