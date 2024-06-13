@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+Listado
+{% endblock title_head %}
+
+{% block h1_header %}
+<h1>
+    Listado de Vuelos
+</h1>
+{% endblock h1_header %}
+
+{% block main %}
+{% if vuelos %}
+    <ul>
+        {% for vuelo in vuelos %}
+        <li>
+        {{vuelo}}
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No hay vuelos registrados</p>
+{% endif %}
+{% endblock main %}
